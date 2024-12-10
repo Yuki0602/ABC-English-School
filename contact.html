@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="初心者から中級者向けの英会話スクールです。楽しく、自信をもって英語を学びましょう！">
+    <title>ABC英会話スクール</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="scss/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="l-body">
+    <!-- header -->
+    <header class="l-header">
+        <h1 class="p-header__logo">
+            <a class="p-header__logo--link" href="index.html">
+                <img class="p-header__logo--image" src="img/logo2.svg">
+            </a>
+        </h1>
+        <nav class="p-header__nav">
+            <ul class="p-header__nav--item">
+                <li class="p-header__list--item">
+                    <a class="p-header__list--link" href="#course">コース紹介</a>
+                </li>
+                <li class="p-header__list--item">
+                    <a class="p-header__list--link" href="#features">スクールの特徴</a>
+                </li>
+                <li class="p-header__list--item">
+                    <a class="p-header__list--link" href="#evaluation">利用者の声</a>
+                </li>
+                <li class="p-header__list--item">
+                    <a class="p-header__list--link" href="#contact">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="p-header__button">
+            <a class="c-button" href="#">無料体験レッスンを予約</a>
+        </div>
+        <div id="burger" class="p-hamburger"></div>
+        <div class="p-menu">
+            <nav class="p-menu__nav">
+                <ul class="p-menu__nav--item">
+                    <li class="p-menu__list--item">
+                        <a class="p-menu__list--link" href="#course">コース紹介</a>
+                    </li>
+                    <li class="p-menu__list--item">
+                        <a class="p-menu__list--link" href="#features">スクールの特徴</a>
+                    </li>
+                    <li class="p-menu__list--item">
+                        <a class="p-menu__list--link" href="#evaluation">利用者の声</a>
+                    </li>
+                    <li class="p-menu__list--item">
+                        <a class="p-menu__list--link" href="#contact">お問い合わせ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /.header -->
+
+    <div class="l-sub__container">
+        <!-- contact -->
+        <div class="p-beginner__wrapper">
+            <div class="p-sub__inner">
+                <i class="fa-solid fa-address-book p-font"></i>
+                <h2 class="c-course__title p-sub__title">
+                    <span class="c-course--strong">予</span>
+                    約フォーム
+                </h2>
+            </div>
+        </div>
+        <form class="p-form">
+            <div class="p-form__item">
+                <p class="p-form__item--label">
+                    <span class="p-form__item--required">必須</span>
+                    氏名
+                </p>
+                <input type="text" class="p-form__item--input p-input" placeholder="例) 山田太郎">
+            </div>
+            <div class="p-form__item">
+                <p class="p-form__item--label">
+                    <span class="p-form__item--required">必須</span>
+                    電話番号
+                </p>
+                <input type="text" class="p-form__item--input p-input" placeholder="例) 000-0000-0000">
+            </div>
+            <div class="p-form__item">
+                <p class="p-form__item--label">
+                    <span class="p-form__item--required">必須</span>
+                    メールアドレス
+                </p>
+                <input type="email" class="p-form__item--input p-input" placeholder="例) example@gmail.com">
+            </div>
+            <div class="p-form__item">
+                <p class="p-form__item--label">
+                    <span class="p-form__item--required">必須</span>
+                    予約日
+                </p>
+                <input type="date" class="p-form__item--input p-input">
+            </div>
+            <div class="p-form__item">
+                <p class="p-form__item--label">
+                    <span class="p-form__item--required">必須</span>
+                    予約時間
+                </p>
+                <input type="time" class="p-form__item--input p-input">
+            </div>
+            <div class="p-form__item">
+                <p class="p-form__item--label">
+                    <span class="p-form__item--required">必須</span>
+                    コース
+                </p>
+                <div class="p-form__radio">
+                    <label for="beginner">
+                        <input type="radio" name="course" value="初心者コース" id="beginner">初心者コース
+                    </label>
+                    <label for="intermediate">
+                        <input type="radio" name="course" value="中級者コース" id="intermediate" class="p-form__radio--item">中級者コース
+                    </label>
+                </div>
+            </div>
+            <div class="p-form__wrapper">
+                <input type="submit" class="p-form__btn c-button" value="送信する">
+            </div>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <footer class="l-footer">
+        <div class="p-footer__wrapper">
+            <dl class="p-desc c-desc">
+                <dt class="c-desc__title p-desc__title">住所</dt>
+                <dd class="c-desc__text p-desc__text">東京都千代田区丸の内1</dd>
+                <dt class="c-desc__title p-desc__title">電話番号</dt>
+                <dd class="c-desc__text p-desc__text">03-1234-5678</dd>
+                <dt class="c-desc__title p-desc__title">メールアドレス</dt>
+                <dd class="c-desc__text p-desc__text">info@abc-english-school.com</dd>
+                <dt class="c-desc__title p-desc__title">代表者</dt>
+                <dd class="c-desc__text p-desc__text">Yuki</dd>
+            </dl>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.833056691536!2d139.7645159759304!3d35.68111242998034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1733484808433!5m2!1sja!2sjp" class="p-footer__map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="p-copyRight">
+            <small class="p-copyRight--item">&copy; 2024 ABC 英会話スクール</small>
+        </p>
+    </footer>
+    <!-- /.footer -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

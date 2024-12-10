@@ -1,0 +1,58 @@
+@charset "utf-8";
+@use "../../foundation/mediaQuery" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+/*
+footer
+*/
+.p-footer__wrapper {
+    @include flex;
+
+    @include media(xl) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .c-desc {
+        padding: 24px 0;
+        width: 50%;
+    }
+
+    .p-desc {
+        @include media(xl) {
+            width: 80%;
+        }
+
+        .p-desc__title {
+            @include media(xl) {
+                width: 30%;
+            }
+        }
+
+        .p-desc__text {
+            @include media(xl) {
+                width: 70%;
+            }
+        }
+    }
+
+    .p-footer__map {
+        width: 600px;
+        height: 300px;
+        margin-right: 40px;
+
+        @include media(xl) {
+            margin-right: 0;
+            width: 80%;
+            height: 200px;
+        }
+    }
+}
+
+.p-copyRight {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 16px 0;
+}

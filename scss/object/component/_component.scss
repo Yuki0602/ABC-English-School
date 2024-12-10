@@ -1,0 +1,90 @@
+@charset "utf-8";
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+/*
+title
+*/
+.c-title__wrapper {
+    text-align: center;
+    margin-top: 140px;
+}
+.c-title {
+    display: inline-block;
+    background-color: $main-color;
+    color: $sub-color;
+    font-size: 2rem;
+    padding: 16px 80px;
+    border-radius: $base-radius;
+}
+.c-course__title {
+    @include font(1.5rem);
+    margin-bottom: 24px;
+
+    .c-course--strong {
+        font-size: 2rem;
+    }
+}
+
+/*
+button
+*/
+.c-button {
+    display: block;
+    @include font(1.2rem);
+    color: $sub-color;
+    background-color: $main-color;
+    border-radius: $base-radius;
+    padding: 16px 24px;
+    box-shadow: 0 4px 4px #9b0a0a;
+
+    &:active {
+        transform: translateY(4px);
+        box-shadow: none;
+    }
+}
+
+/*
+description
+*/
+.c-desc {
+    padding-top: 24px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .c-desc__title {
+        width: 18%;
+        @include font(1.2rem);
+        line-height: 1.5;
+        padding: 0 16px 16px;
+    }
+
+    .c-desc__text {
+        width: 70%;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        padding: 0 16px 16px;
+    }
+}
+
+/*
+image
+*/
+.c-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+}
+
+/*
+utility
+*/
+.c-mb {
+    margin-bottom: 100px;
+}
+.c-strong {
+    font-size: 3.5rem;
+}

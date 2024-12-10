@@ -1,0 +1,107 @@
+@charset "utf-8";
+@use "./mediaQuery" as *;
+@use "./mixin" as *;
+@use "./variables" as *;
+
+/*
+animation
+*/
+
+// slideIn
+.slideIn {
+    transition: 3s cubic-bezier(0.75, 0, 0.25, 1);
+}
+
+.slide-left {
+    transform: translateX(calc(-50vw - 50%));
+}
+
+.slide-right {
+    transform: translateX(calc(50vw + 50%));
+}
+
+.show {
+    transform: translateX(0);
+}
+
+// fadeIn
+.fadeIn-left {
+    transform: translate3d(-50px, 0, 0);
+    transition: 3s;
+    opacity: 0;
+}
+
+.fadeIn-right {
+    transform: translate3d(50px, 0, 0);
+    transition: 3s;
+    opacity: 0;
+}
+
+.fadeIn-left.animated,
+.fadeIn-right.animated {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+// hamburger
+.p-hamburger {
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/menu.svg);
+    background-size: 60px;
+    background-color: $main-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+    display: none;
+
+    &.is-active {
+        background-image: url(../img/close.svg);
+        height: 40px;
+        width: 40px;
+    }
+
+    @include media(xl) {
+        display: block;
+    }
+}
+
+.p-menu {
+    width: 80%;
+    height: 100vh;
+    background-color: $main-color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+
+    .p-menu__nav--item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+
+        .p-menu__list--item {
+            @include font(1.2rem);
+            color: $sub-color;
+            padding: 8px 24px;
+            border-radius: $base-radius;
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: $sub-color;
+                color: $main-color;
+            }
+
+        }
+    }
+}

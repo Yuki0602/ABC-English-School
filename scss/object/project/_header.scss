@@ -1,0 +1,57 @@
+@charset "utf-8";
+@use "../../foundation/mediaQuery" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+/*
+header
+*/
+.p-header__logo--image {
+    height: 100px;
+    width: 100px;
+}
+
+.p-header__nav--item {
+    @include media(xl) {
+        display: none;
+    }
+
+    .p-header__list--item {
+        display: inline-block;
+        @include font(1.2rem);
+        color: $main-color;
+        padding-right: 1.2rem;
+
+        &:nth-child(4) {
+            padding-right: 0;
+        }
+
+        .p-header__list--link {
+            position: relative;
+
+            &:after {
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+                content: "";
+                width: 100%;
+                height: 4px;
+                background-color: $sub-color;
+                border-radius: $base-radius;
+                transform: scale(0, 1);
+                transform-origin: center top;
+                transition: transform 0.3s;
+            }
+
+            &:hover:after {
+                transform: scale(1, 1);
+            }
+        }
+    }
+}
+
+.p-header__button {
+    @include media(xl) {
+        display: none;
+    }
+}
